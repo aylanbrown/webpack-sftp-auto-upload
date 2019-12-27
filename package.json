@@ -1,0 +1,25 @@
+{
+  "name": "webpack-sftp-auto-upload",
+  "version": "1.0.0",
+  "description": "Upload Automatically file in local folder to SFTP server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aylanbrown/webpack-sftp-auto-upload.git"
+  },
+  "keywords": [
+    "webpack",
+    "scp2",
+    "sftp"
+  ],
+  "author": "aylan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aylanbrown/webpack-sftp-auto-upload/issues"
+  },
+  "homepage": "https://github.com/aylanbrown/webpack-sftp-auto-upload#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "scp2": "^0.5.0"
+  }
+}
