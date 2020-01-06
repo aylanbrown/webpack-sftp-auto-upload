@@ -1,6 +1,6 @@
 {
   "name": "webpack-sftp-auto-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Upload Automatically file in local folder to SFTP server",
   "main": "index.js",
   "repository": {

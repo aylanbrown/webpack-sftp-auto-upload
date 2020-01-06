@@ -12,27 +12,6 @@ class SftpUpload {
 
 	constructor(props = {}) {
 
-
-		let list  = ['host', 'username', 'password', 'localPath', 'path'], // required character
-				empty = null;
-
-
-		for( let i = 0, len = list.length; i < len; i++ ) {
-
-			if( !props[ list[i] ] ) {
-
-				empty = list[i];
-				break;
-			}
-		};
-
-		if( empty ) {
-
-			console.log(chalk.red(`Error: ${ empty } is required character`));
-			// if required character is empty, and it exit in process
-			process.exit();
-		}
-
 		// default port is 22
 		this.options = Object.assign({ port: 22 }, props);
 	}
@@ -43,9 +22,28 @@ class SftpUpload {
 
 				// options = { host, username, password, localPath, path, title }
 
-			let options = this.options,
+			let list    = ['host', 'username', 'password', 'localPath', 'path'], // required character
+					options = this.options,
 					start   = Date.now(),
+					empty   = null,
 					end     = null;
+
+
+			for( let i = 0, len = list.length; i < len; i++ ) {
+
+				if( !options[ list[i] ] ) {
+
+					empty = list[i];
+					break;
+				}
+			};
+
+			if( empty ) {
+
+				console.log(chalk.red(`Error: ${ empty } is required character`));
+				// if required character is empty, and it exit in process
+				process.exit();
+			};
 
 			client.scp(options.localPath, options, (err) => {
 
